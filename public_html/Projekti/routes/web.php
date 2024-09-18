@@ -14,7 +14,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/about', function () {
     return view('about');
-});
+})->middleware()->name('about'); 
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
