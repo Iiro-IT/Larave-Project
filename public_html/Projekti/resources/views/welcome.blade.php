@@ -945,6 +945,4 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>
+</x-app-layout>
