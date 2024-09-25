@@ -65,9 +65,23 @@
     color: var(--color-dark-text, #f7fafc); 
 }
 
+.CopyrightFooter {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;    
+    font-size: 0.875rem;     
+    color: #000000;          
+}
+
+@media (prefers-color-scheme: dark) {
+    .CopyrightFooter {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
 
 .fisuCard {
-    
+
     }
 
 .fisuContainer {
