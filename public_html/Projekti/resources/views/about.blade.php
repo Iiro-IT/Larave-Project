@@ -10,10 +10,19 @@
             <div class="box">
                 <div class="content">
                     <div class="message">
-                    {{ __("You're logged in!") }}
+
+                        <div class="fisuCard">
+                            <img src="fisu_avatar.png">
+                        </div>
+
+                            <div class="fisuContainer">
+                              <h4><b>Fisujärvi</b></h4>
+                              <p>SpriteMaker</p>
+                          </div> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </x-app-layout>
