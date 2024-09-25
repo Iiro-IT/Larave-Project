@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    backround-image: url('grass.jpg');
+    background-image: url('grass.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+}
+.mainNav {
+    background-color: pink;
+}
+
+.mainHeader {
+    background-color: palevioletred;
+
 }
