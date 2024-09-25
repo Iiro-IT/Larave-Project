@@ -3,29 +3,75 @@
 @tailwind utilities;
 
 
-body {
+.mainNav {
     background-image: url('grass.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-}
-.mainNav {
-    background-color: white;
 }
 
 .mainHeader {
     background-color: pink;
-
 }
 
 .topDash {
     color: black;
 }
 
+.topDash:hover {
+    background-color: rgba(0,0, 0, 0.25);
+    transition: 0.3s;
+}
+
 .topAbout {
     color: black;
 
+}
+
+.topAbout:hover {
+    background-color: rgba(0,0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.container {
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+}
+
+.box {
+    max-width: 80rem; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .box {
+        padding-left: 2rem; 
+        padding-right: 2rem; 
+    }
+}
+
+.content {
+    background-color: white;
+    background-color: var(--color-dark-bg, #2d3748); 
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.message {
+    padding: 1.5rem; 
+    color: var(--color-dark-text, #f7fafc); 
+}
+
+
+.fisuCard {
+    
+    }
+
+.fisuContainer {
+    font-size: 16px;
 }
 
 .CopyrightFooter {

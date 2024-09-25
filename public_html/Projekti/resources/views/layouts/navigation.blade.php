@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link class="topAbout" :href="route('about')" :active="request()->routeIs('about') ">
-                        {{ __('about') }}
+                        {{ __('Socials') }}
                     </x-nav-link>
                 </div>
             </div>
