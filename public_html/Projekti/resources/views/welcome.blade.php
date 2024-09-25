@@ -944,8 +944,8 @@
                     <!-- page content here -->
 
                 </main>
-                <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                    4kur &copy; <br>
+                <footer class="CopyrightFooter">
+                    SpellGauntlet &copy; <br>
                     2024 - 2025 <br>
                 </footer>
             </div>
