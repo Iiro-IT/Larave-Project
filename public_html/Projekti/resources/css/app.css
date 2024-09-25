@@ -11,10 +11,19 @@ body {
     
 }
 .mainNav {
-    background-color: pink;
+    background-color: white;
 }
 
 .mainHeader {
-    background-color: palevioletred;
+    background-color: pink;
+
+}
+
+.topDash {
+    color: black;
+}
+
+.topAbout {
+    color: black;
 
 }
