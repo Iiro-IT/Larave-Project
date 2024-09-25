@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <title>WildLife Smp</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -902,17 +903,19 @@
     </style>
 </head>
 
-<body class="font-sans antialiased bg-black dark:text-white/50">
+<body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <img id="background" class="absolute -left-20 top-0 max-w-[877px]"
-            src="https://laravel.com/assets/img/welcome/background.svg" />
+        <img id="background" class="absolute inset-0 w-full h-full object-cover z-[-1]"
+            src="https://i.ibb.co/tY89SCX/bg.jpg" alt="Background Image" />
         <div
             class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
             <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                    <div class="flex lg:justify-center lg:col-start-2">
-                        <img src="{{ asset('icon.png')}}" class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]">
+                    <!--------- Logo -------->
+                    <div class="flex lg:justify-center lg:col-start-2 w-1/2">
+                        <img src="{{ asset('icon.png') }}">
                     </div>
+                    <!--------- End Of Logo -------->
                     @if (Route::has('login'))
                         <nav class="-mx-3 flex flex-1 justify-end">
                             @auth
@@ -936,13 +939,18 @@
                         </nav>
                     @endif
                 </header>
+                <main>
 
-                
+                    <!-- page content here -->
 
+                </main>
                 <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                    Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    4kur &copy; <br>
+                    2024 - 2025 <br>
                 </footer>
             </div>
         </div>
     </div>
-</x-app-layout>
+</body>
+
+</html>
