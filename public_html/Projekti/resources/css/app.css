@@ -101,21 +101,12 @@
     margin: 10px 0;
 }
 
-        
 .CopyrightFooter {
     padding-top: 4rem;      /* py-16 (top and bottom padding) */
     padding-bottom: 4rem;
     text-align: center;      /* text-center */
     font-size: 0.875rem;     /* text-sm */
     color: #000000;          /* text-black */
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: white; /* Background color */
-    border: 2px solid black; /* Optional: border color */
-    border-radius: 100px; /* Makes it fully rounded */
 }
 
 /* Dark mode styling */
@@ -125,3 +116,32 @@
     }
 }
 
+.taustakuva {
+    min-height: 100vh; /* Full height of the viewport */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    padding-top: 1.5rem; /* 24px padding top */
+    background-image: url("https://i.ibb.co/tY89SCX/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Dark mode styles */
+.taustakuva.dark {
+    background-color: #1a202c; /* Dark gray background */
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) { /* sm breakpoint */
+    .bg {
+        padding-top: 0; /* Remove padding on larger screens */
+    }
+}
+
+body {
+
+    background-color: red;
+
+}

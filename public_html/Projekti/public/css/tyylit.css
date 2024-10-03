@@ -883,3 +883,9 @@ video {
         --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity))
     }
 }
+
+body {
+
+    background-color: red;
+
+}
