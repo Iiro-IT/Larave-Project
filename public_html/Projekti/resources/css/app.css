@@ -1,3 +1,118 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.mainNav {
+    background-image: url('grass.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mainHeader {
+    background-color: pink;
+}
+
+.topDash {
+    color: black;
+}
+
+.topDash:hover {
+    background-color: rgba(0,0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.topAbout {
+    color: black;
+
+}
+
+.topAbout:hover {
+    background-color: rgba(0,0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.container {
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+}
+
+.box {
+    max-width: 80rem; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+
+    .box {
+        padding-left: 2rem; 
+        padding-right: 2rem; 
+    }
+}
+
+.content {
+    background-color: white;
+    background-color: var(--color-dark-bg, #2d3748); 
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.message {
+    padding: 1.5rem; 
+    color: var(--color-dark-text, #f7fafc); 
+}
+
+.CopyrightFooter {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;    
+    font-size: 0.875rem;     
+    color: #000000;          
+}
+
+@media (prefers-color-scheme: dark) {
+    .CopyrightFooter {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+
+.fisuCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AkurCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.fisuCard img,
+.AkurCard img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+        
+.CopyrightFooter {
+    padding-top: 4rem;      /* py-16 (top and bottom padding) */
+    padding-bottom: 4rem;
+    text-align: center;      /* text-center */
+    font-size: 0.875rem;     /* text-sm */
+    color: #000000;          /* text-black */
+}
+
+/* Dark mode styling */
+@media (prefers-color-scheme: dark) {
+    .CopyrightFooter {
+        color: rgba(255, 255, 255, 0.7);  /* dark:text-white/70 */
+    }
+}

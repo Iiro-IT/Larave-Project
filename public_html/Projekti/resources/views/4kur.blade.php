@@ -17,7 +17,7 @@
                         </div>
 
                             <div class="AkurCard">
-                                <img src="Akur_avatar.jpg">
+                                <img src=<a href="Akur_avatar.jpg">HTML Images</a>>
                                 </div> 
                             </div>
 
