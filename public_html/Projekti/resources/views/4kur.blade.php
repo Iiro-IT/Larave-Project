@@ -10,8 +10,8 @@
             <div class="box">
                 <div class="content">
                     <div class="message">
-                        <div class="Akur-box">
-                            <textarea placeholder="Write your text here..."></textarea>
+                        <div class="Akurbox">
+                            <textarea placeholder="Text"></textarea>
                         </div>
                     </div>
                 </div>

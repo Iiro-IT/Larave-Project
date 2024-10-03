@@ -13,9 +13,9 @@
 
                         <div class="fisuCard">
                             <a href="{{ url('/fisu') }}">
-                                <img src="fisu_avatar.png" alt="fisu Avatar">
+                                <img src="fisu_avatar.png" alt="Fisu Avatar">
                             </a>
-                        </div>
+            </div>
 
                         </div>
 
