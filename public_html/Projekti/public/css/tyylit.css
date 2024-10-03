@@ -886,6 +886,8 @@ video {
 
 body {
 
-    background-color: red;
+    background-image: url("https://i.ibb.co/tY89SCX/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
