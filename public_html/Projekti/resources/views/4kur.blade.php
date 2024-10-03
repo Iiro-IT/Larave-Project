@@ -7,7 +7,15 @@
 
     <div class="py-12">
         <div class="container laatikko content message Akurbox">
+            <div class="laatikko">
+                <div class="content">
+                    <div class="message">
+                        <div class="Akurbox">
                             <textarea placeholder="Text"></textarea>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </x-app-layout>
