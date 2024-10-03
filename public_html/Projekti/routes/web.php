@@ -16,13 +16,15 @@ Route::get('/about', function () {
     return view('about');
 })->name('about'); 
 
-Route::get('/Fisujärvi', function () {
-    return view('Fisujärvi');
-})->name('Fisujärvi'); 
 
 Route::get('/4kur', function () {
     return view('4kur');
 })->name('4kur'); 
+
+Route::get('/fisu', function () {
+    return view('fisu');
+})->name('fisu');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

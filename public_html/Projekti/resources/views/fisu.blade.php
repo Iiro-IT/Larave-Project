@@ -8,4 +8,4 @@
     <div class="py-12">
        
             </div>
-</x-app-layout> 
+</x-app-layout>

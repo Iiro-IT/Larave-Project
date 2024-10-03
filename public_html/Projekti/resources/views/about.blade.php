@@ -12,12 +12,18 @@
                     <div class="message">
 
                         <div class="fisuCard">
-                            <img src="fisu_avatar.png">
-                            </div> 
+                            <a href="{{ url('/fisu') }}">
+                                <img src="fisu_avatar.png" alt="fisu Avatar">
+                            </a>
+                        </div>
+
                         </div>
 
                             <div class="AkurCard">
-                                <img src="Akur_avatar.jpg">
+                            <a href="{{ url('/4kur') }}">
+                                <img src="Akur_avatar.jpg" alt="Akur Avatar">
+                            </a>
+
                                 </div> 
                             </div>
 
