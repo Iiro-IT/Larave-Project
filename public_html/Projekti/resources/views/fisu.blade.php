@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="container">
-            <div class="box">
+            <div class="laatikko">
                 <div class="content">
                     <div class="message">
                         <div class="fisubox">
