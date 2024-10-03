@@ -6,12 +6,12 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="container laatikko content message Akurbox">
+        <div class="container">
             <div class="laatikko">
                 <div class="content">
                     <div class="message">
                         <div class="Akurbox">
-                            <textarea placeholder="Text"></textarea>
+                            <textarea placeholder=""></textarea>
                         </div>
                     </div>
                 </div>
