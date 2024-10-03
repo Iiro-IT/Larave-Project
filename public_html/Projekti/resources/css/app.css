@@ -110,9 +110,18 @@
     color: #000000;          /* text-black */
 }
 
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: white; /* Background color */
+    border: 2px solid black; /* Optional: border color */
+    border-radius: 100px; /* Makes it fully rounded */
+}
+
 /* Dark mode styling */
 @media (prefers-color-scheme: dark) {
     .CopyrightFooter {
         color: rgba(255, 255, 255, 0.7);  /* dark:text-white/70 */
     }
 }
+
