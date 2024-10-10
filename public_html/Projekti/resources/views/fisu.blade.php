@@ -13,7 +13,6 @@
                         <div class="fisuBox">
                             <textarea id="dynamicFisuTextarea" readonly placeholder="Check our Instagram:">
                                 Your initial text here...</textarea>
-                                @YourInstagramHandle
                         </div>
                     </div>
                 </div>
