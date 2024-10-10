@@ -5,24 +5,28 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 taustakuva">
         <div class="container">
             <div class="laatikko">
                 <div class="content">
                     <div class="message">
                         <div class="Akurbox">
-                            <textarea placeholder="Type your message here..."></textarea>
-                            <!-- Hyperlink to Instagram -->
-                            <p class="instagram-link">
-                                 
-                                <a href="https://www.instagram.com/akuroininen?igsh=eW8yNDh0ZzE5aGFi" target="_blank" rel="noopener noreferrer">
-                                    My Instagram
-                                </a>
-                            </p>
+                            <textarea id="dynamicAkurTextarea" readonly placeholder="Check our Instagram: ">
+                                Your initial text here...</textarea>
+                               
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const akurTextarea = document.getElementById('dynamicAkurTextarea');
+
+        akurTextarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    </script>
 </x-app-layout>

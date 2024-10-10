@@ -7,8 +7,8 @@
 }
 
 .mainHeader {
-background: rgb(75,72,72);
-background: linear-gradient(122deg, rgba(75,72,72,1) 0%, rgba(227,227,227,1) 51%, rgba(198,189,189,1) 100%);
+    background: rgb(75, 72, 72);
+    background: linear-gradient(122deg, rgba(75, 72, 72, 1) 0%, rgba(227, 227, 227, 1) 51%, rgba(198, 189, 189, 1) 100%);
 }
 
 .container {
@@ -36,11 +36,10 @@ background: linear-gradient(122deg, rgba(75,72,72,1) 0%, rgba(227,227,227,1) 51%
     padding: 1.5rem;
 }
 
-/* Pokémon card style */
 .pokemonCard {
     background-color: #f3f4f6;
     border-radius: 10px;
-    border: 2px solid #f6e58d; /* Yellow border like a Pokémon card */
+    border: 2px solid #f6e58d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
     padding: 20px;
@@ -50,7 +49,7 @@ background: linear-gradient(122deg, rgba(75,72,72,1) 0%, rgba(227,227,227,1) 51%
 }
 
 .pokemonCard:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .pokemonCard h3 {
@@ -64,7 +63,6 @@ background: linear-gradient(122deg, rgba(75,72,72,1) 0%, rgba(227,227,227,1) 51%
     font-size: 1rem;
     font-style: italic;
 }
-
 
 .fisuAvatar,
 .akurAvatar {
@@ -81,37 +79,49 @@ background: linear-gradient(122deg, rgba(75,72,72,1) 0%, rgba(227,227,227,1) 51%
 }
 
 
-.instagram-link {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #1DA1F2;
-    transition: color 0.3s; 
-}
-
-.instagram-link a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.instagram-link:hover {
-    color: #157ec0;
-}
-
-.instagram-link a:hover {
-    text-decoration: underline;
-}
-
 .taustakuva {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 1.5rem;
+    padding: 2rem;
     background-image: url("https://i.ibb.co/tY89SCX/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* Media Queries */
+.Akurbox,
+.fisuBox {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.Akurbox textarea,
+.fisuBox textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    transition: border-color 0.3s;
+}
+
+.Akurbox textarea::placeholder,
+.fisuBox textarea::placeholder {
+    color: #1DA1F2;
+    font-style: italic;
+}
+
+.note {
+    color: #555;
+}
+
 @media (min-width: 1024px) {
     .message {
         justify-content: space-between;

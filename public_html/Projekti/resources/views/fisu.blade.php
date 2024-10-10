@@ -1,29 +1,32 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('4kur Page') }}
+            {{ __('Fisu Page') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 taustakuva">
         <div class="container">
             <div class="laatikko">
                 <div class="content">
                     <div class="message">
-                        <div class="Akurbox">
-                            <textarea placeholder="Type your message here..."></textarea>
-
-                            <!-- Hyperlink to Instagram -->
-                            <p class="instagram-link">
-                                 
-                                <a href="https://www.instagram.com/iiro_kalasniemi/" target="_blank" rel="noopener noreferrer">
-                                    My Instagram
-                                </a>
-                            </p>
+                        <div class="fisuBox">
+                            <textarea id="dynamicFisuTextarea" readonly placeholder="Check our Instagram:">
+                                Your initial text here...</textarea>
+                                @YourInstagramHandle
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const fisuTextarea = document.getElementById('dynamicFisuTextarea');
+
+        fisuTextarea.addEventListener('input', function () {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    </script>
 </x-app-layout>
