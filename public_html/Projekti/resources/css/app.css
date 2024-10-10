@@ -7,7 +7,8 @@
 }
 
 .mainHeader {
-    background-color: gray;
+background: rgb(75,72,72);
+background: linear-gradient(122deg, rgba(75,72,72,1) 0%, rgba(227,227,227,1) 51%, rgba(198,189,189,1) 100%);
 }
 
 .container {
@@ -64,22 +65,42 @@
     font-style: italic;
 }
 
-/* Fixed size for both avatars */
+
 .fisuAvatar,
 .akurAvatar {
-    width: 200px; /* Fixed width */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 50%; /* Circular shape */
-    border: 3px solid #3498db; /* Water-type border for Fisu */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
     background-color: #ecf0f1;
 }
 
 .akurAvatar {
-    border-color: #e74c3c; /* Fire-type border for Akur */
+    border-color: #21B94E;
 }
 
-/* Background for the whole page */
+
+.instagram-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1DA1F2;
+    transition: color 0.3s; 
+}
+
+.instagram-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.instagram-link:hover {
+    color: #157ec0;
+}
+
+.instagram-link a:hover {
+    text-decoration: underline;
+}
+
 .taustakuva {
     min-height: 100vh;
     display: flex;
@@ -99,8 +120,8 @@
 
 @media (prefers-color-scheme: dark) {
     .pokemonCard {
-        background-color: #1f2937; /* Dark mode background */
-        border-color: #f6e58d;
+        background-color: #1f2937;
+        border-color: lightslategray;
     }
 
     .pokemonCard h3, .pokemonCard .description {
