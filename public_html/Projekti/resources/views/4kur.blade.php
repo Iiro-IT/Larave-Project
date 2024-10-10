@@ -5,9 +5,28 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="container laatikko content message Akurbox">
-                            <textarea placeholder="Text"></textarea>
+    <div class="py-12 taustakuva">
+        <div class="container">
+            <div class="laatikko">
+                <div class="content">
+                    <div class="message">
+                        <div class="Akurbox">
+                            <textarea id="dynamicAkurTextarea" readonly placeholder="Check our Instagram: ">
+                                Your initial text here...</textarea>
+                               
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        const akurTextarea = document.getElementById('dynamicAkurTextarea');
+
+        akurTextarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    </script>
 </x-app-layout>

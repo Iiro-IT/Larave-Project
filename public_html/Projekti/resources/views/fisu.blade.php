@@ -5,17 +5,28 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 taustakuva">
         <div class="container">
             <div class="laatikko">
                 <div class="content">
                     <div class="message">
-                        <div class="fisubox">
-                            <textarea placeholder="Write your text here..."></textarea>
+                        <div class="fisuBox">
+                            <textarea id="dynamicFisuTextarea" readonly placeholder="Check our Instagram:">
+                                Your initial text here...</textarea>
+                                @YourInstagramHandle
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const fisuTextarea = document.getElementById('dynamicFisuTextarea');
+
+        fisuTextarea.addEventListener('input', function () {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+    </script>
 </x-app-layout>

@@ -2,161 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .mainNav {
-    background-image: url('grass.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: black;
 }
 
 .mainHeader {
-    background-color: pink;
-}
-
-.topDash {
-    color: black;
-}
-
-.topDash:hover {
-    background-color: rgba(0,0, 0, 0.25);
-    transition: 0.3s;
-}
-
-.topAbout {
-    color: black;
-
-}
-
-.topAbout:hover {
-    background-color: rgba(0,0, 0, 0.25);
-    transition: 0.3s;
+    background: rgb(75, 72, 72);
+    background: linear-gradient(122deg, rgba(75, 72, 72, 1) 0%, rgba(227, 227, 227, 1) 51%, rgba(198, 189, 189, 1) 100%);
 }
 
 .container {
     padding-top: 3rem;
-    padding-bottom: 3rem; 
+    padding-bottom: 3rem;
 }
 
 .laatikko {
-    max-width: 80rem; 
+    max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
-@media (min-width: 1024px) {
-
-    .laatikko {
-        padding-left: 2rem; 
-        padding-right: 2rem; 
-    }
-}
-
 .content {
-    background-color: white;
-    background-color: var(--color-dark-bg, #2d3748); 
-    overflow: hidden;
+    background-color: var(--color-dark-bg, #2d3748);
     border-radius: 0.5rem;
 }
 
 .message {
-    padding: 1.5rem; 
-    color: var(--color-dark-text, #f7fafc); 
-}
-
-.CopyrightFooter {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    text-align: center;    
-    font-size: 0.875rem;     
-    color: #000000;          
-}
-
-@media (prefers-color-scheme: dark) {
-    .CopyrightFooter {
-        color: rgba(255, 255, 255, 0.7);
-    }
-}
-
-
-.fisuCard {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1.5rem;
 }
 
-.AkurCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.pokemonCard {
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    border: 2px solid #f6e58d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    max-width: 300px;
+    transition: transform 0.3s ease;
 }
 
+.pokemonCard:hover {
+    transform: scale(1.05);
+}
 
-.fisuCard img,
-.AkurCard img {
-    max-width: 100%;
-    height: auto;
+.pokemonCard h3 {
+    font-family: 'Pokemon', sans-serif;
+    color: #222;
     margin: 10px 0;
 }
 
-.CopyrightFooter {
-    padding-top: 4rem;      /* py-16 (top and bottom padding) */
-    padding-bottom: 4rem;
-    text-align: center;      /* text-center */
-    font-size: 0.875rem;     /* text-sm */
-    color: #000000;          /* text-black */
+.pokemonCard .description {
+    color: #555;
+    font-size: 1rem;
+    font-style: italic;
 }
 
-/* Dark mode styling */
-@media (prefers-color-scheme: dark) {
-    .CopyrightFooter {
-        color: rgba(255, 255, 255, 0.7);  /* dark:text-white/70 */
-    }
-}
-
-.Akurbox, .fisubox {
-    margin-top: 20px;
-    padding: 10px; 
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-}
-
-.Akurbox textarea, .fisubox textarea {
-    width: 100%;
+.fisuAvatar,
+.akurAvatar {
+    width: 200px;
     height: 200px;
-    border: none; 
-    outline: none;
-    font-size: 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    background-color: #ecf0f1;
 }
 
-.Akurbox textarea::placeholder, .fisubox textarea::placeholder {
-    color: #aaa;
+.akurAvatar {
+    border-color: #21B94E;
 }
+
 
 .taustakuva {
-    min-height: 100vh; /* Full height of the viewport */
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    padding-top: 1.5rem; /* 24px padding top */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
     background-image: url("https://i.ibb.co/tY89SCX/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* Dark mode styles */
-.taustakuva.dark {
-    background-color: #1a202c; /* Dark gray background */
+.Akurbox,
+.fisuBox {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-/* Responsive adjustments */
-@media (min-width: 640px) { /* sm breakpoint */
-    .taustakuva {
-        padding-top: 0; /* Remove padding on larger screens */
+.Akurbox textarea,
+.fisuBox textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    transition: border-color 0.3s;
+}
+
+.Akurbox textarea::placeholder,
+.fisuBox textarea::placeholder {
+    color: #1DA1F2;
+    font-style: italic;
+}
+
+.note {
+    color: #555;
+}
+
+@media (min-width: 1024px) {
+    .message {
+        justify-content: space-between;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .pokemonCard {
+        background-color: #1f2937;
+        border-color: lightslategray;
+    }
+
+    .pokemonCard h3, .pokemonCard .description {
+        color: white;
+    }
+
+    .fisuAvatar, .akurAvatar {
+        background-color: #4a5568;
     }
 }
