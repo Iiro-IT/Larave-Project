@@ -4,14 +4,11 @@
 
 
 .mainNav {
-    background-image: url('grass.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: black;
 }
 
 .mainHeader {
-    background-color: pink;
+    background-color: gray;
 }
 
 .topDash {
@@ -141,8 +138,6 @@
     min-height: 100vh; /* Full height of the viewport */
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
     padding-top: 1.5rem; /* 24px padding top */
     background-image: url("https://i.ibb.co/tY89SCX/bg.jpg");
     background-repeat: no-repeat;
