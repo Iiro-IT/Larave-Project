@@ -37,12 +37,21 @@ class ShopController extends Controller
         return redirect()->route('cart')->with('success', 'Item added to cart!');
     }
 
-    public function cart()
-    {
-        $cart = Session::get('cart', []);
+    public function clearCart()
+{
+    
+    Cart::truncate(); 
 
-        return view('cart', compact('cart'));
-    }
+    return redirect()->route('cart')->with('success', 'Cart cleared successfully!');
+}
+
+
+public function cart()
+{
+    $cartItems = Cart::all();
+
+    return view('cart', compact('cartItems'));
+}
 
 
     
