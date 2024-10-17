@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\ShopController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,5 +40,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+
+Route::get('/store', [ShopController::class, 'store'])->name('store');
+Route::post('/add-to-cart', [ShopController::class, 'addToCart'])->name('addToCart');
+Route::get('/cart', [ShopController::class, 'cart'])->name('cart');
+Route::post('/clear-cart', [ShopController::class, 'clearCart'])->name('clearCart'); // New route
+
+
 
 require __DIR__ . '/auth.php';
