@@ -11,6 +11,7 @@
                 <div class="content">
                     <div class="message">
 
+                        <!-- Fisu Pokémon Card -->
 
                         <div class="pokemonCard fisuCard">
                             <a href="{{ url('/fisu') }}">
