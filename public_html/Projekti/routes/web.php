@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\ShopController;
+
 use App\Http\Controllers\ProductsController;
 Route::get('/', function () {
     return view('welcome');
@@ -49,10 +50,18 @@ Route::post('/add-to-cart', [ShopController::class, 'addToCart'])->name('addToCa
 Route::get('/cart', [ShopController::class, 'cart'])->name('cart');
 Route::post('/clear-cart', [ShopController::class, 'clearCart'])->name('clearCart'); // New route
 
+
+
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
-    Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
     Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
+    Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
+
 });
+
+
+
+
 
 require __DIR__ . '/auth.php';

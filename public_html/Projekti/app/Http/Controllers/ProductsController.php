@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product; // Ensure this line is present
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -15,9 +15,9 @@ class ProductsController extends Controller
 
     public function create()
     {
-        return view('products.create');
+        return view('products.product_create');
     }
-
+    
     public function store(Request $request)
     {
         $request->validate([
