@@ -12,6 +12,7 @@
                     {{ Session::get('success') }}
                 </div>
             @endif
+
             <div class="CartItems">
                 @if ($cartItems->isNotEmpty())
                     @foreach ($cartItems as $item)
@@ -20,7 +21,7 @@
                         </div>
                     @endforeach
 
-                    <!-- Clear Cart Button -->
+                    
                     <form action="{{ route('clearCart') }}" method="POST">
                         @csrf
                         <button type="submit" class="ClearCartButton">Clear Cart</button>

@@ -10,21 +10,25 @@
             <div class="ShopBox">
                 <div class="ShopContent">
                     <div class="ShopMessage">
-                        <div class="ProductGrid"> <!-- Added Flex Container -->
+                        <div class="ProductGrid">
                             @foreach ($items as $item)
+                            
                                 <!-- Card -->
                                 <div class="ShopCard">
                                     <img src="{{ asset($item['image']) }}" alt="{{ $item['name'] }}"
                                         class="ProductAvatar">
                                     <p class="ShopDescription">{{ $item['name'] }} - ${{ $item['price'] }}</p>
+
                                     <form action="{{ route('addToCart') }}" method="POST">
+
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $item['id'] }}">
                                         <input type="hidden" name="name" value="{{ $item['name'] }}">
                                         <input type="hidden" name="price" value="{{ $item['price'] }}">
                                         <button type="submit" class="AddToCartButton">Add to Cart</button>
+
                                     </form>
-                                    
+
                                 </div>
                             @endforeach
                         </div>
