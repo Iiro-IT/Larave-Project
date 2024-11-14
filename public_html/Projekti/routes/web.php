@@ -61,6 +61,11 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
+Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
+Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
+
+
+
 
 
 
