@@ -59,4 +59,12 @@ Route::post('/products', [ProductsController::class, 'store'])->name('products.s
 Route::middleware(['auth'])->group(function () {
 
 });
+
+
+
+Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
+Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
+Route::put('/products/{id}', [ProductsController::class, 'update'])->name('products.update');
+Route::delete('/products/{id}', [ProductsController::class, 'destroy'])->name('products.destroy');
+
 require __DIR__ . '/auth.php';
