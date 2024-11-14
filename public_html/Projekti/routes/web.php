@@ -41,56 +41,24 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-
 Route::get('/store', [ShopController::class, 'store'])->name('store');
 Route::post('/add-to-cart', [ShopController::class, 'addToCart'])->name('addToCart');
 Route::get('/cart', [ShopController::class, 'cart'])->name('cart');
 Route::post('/clear-cart', [ShopController::class, 'clearCart'])->name('clearCart');
 
-
-
-
 Route::middleware(['auth'])->group(function () {
     Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
     Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
     Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
-
 });
 
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 
-Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
-
-    // News listing for admin
-    Route::get('/news', [NewsController::class, 'index'])->name('news.index'); 
-    
-    // Create new news article
-    Route::get('/news/create', [NewsController::class, 'create'])->name('news.create'); 
-    
-    // Store new news article
-    Route::post('/news', [NewsController::class, 'store'])->name('news.store'); 
-    
-    // Edit news article
-    Route::get('/news/{id}/edit', [NewsController::class, 'edit'])->name('news.edit'); 
-    
-    // Update news article
-    Route::put('/news/{id}', [NewsController::class, 'update'])->name('news.update'); 
-    
-    // Delete news article
-    Route::delete('/news/{id}', [NewsController::class, 'destroy'])->name('news.destroy'); 
-    
-    // View news article (for admin)
-    Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show'); 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/news/create', [NewsController::class, 'create'])->name('news.create');  // Admin page to create news
+    Route::post('/admin/news', [NewsController::class, 'store'])->name('news.store');  // Store the news
 });
-
-// Public route for viewing a single news article
-Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
-
-
-Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
 
 
 
