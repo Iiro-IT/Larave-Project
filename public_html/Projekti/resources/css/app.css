@@ -1,191 +1,187 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .mainNav {
-background-color: black;
-}
-
-.mainHeader {
-background: rgb(75, 72, 72);
-background: linear-gradient(122deg, rgba(75, 72, 72, 1) 0%, rgba(227, 227, 227, 1) 51%, rgba(198, 189, 189, 1) 100%);
-}
-
-.container {
-padding-top: 3rem;
-padding-bottom: 3rem;
-}
-
-.laatikko {
-max-width: 80rem;
-margin-left: auto;
-margin-right: auto;
-padding-left: 1.5rem;
-padding-right: 1.5rem;
-}
-
-.content {
-background-color: var(--color-dark-bg, #2d3748);
-border-radius: 0.5rem;
-}
-
-.message {
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-padding: 1.5rem;
-}
-
-.pokemonCard {
-background-color: #f3f4f6;
-border-radius: 10px;
-border: 2px solid #f6e58d;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-text-align: center;
-padding: 20px;
-margin: 15px;
-max-width: 300px;
-transition: transform 0.3s ease;
-}
-
-.pokemonCard:hover {
-transform: scale(1.05);
-}
-
-.pokemonCard h3 {
-font-family: 'Pokemon', sans-serif;
-color: #222;
-margin: 10px 0;
-}
-
-.pokemonCard .description {
-color: #555;
-font-size: 1rem;
-font-style: italic;
-}
-
-.fisuAvatar,
-.akurAvatar {
-width: 200px;
-height: 200px;
-object-fit: cover;
-border-radius: 50%;
-border: 3px solid #3498db;
-background-color: #ecf0f1;
-}
-
-.akurAvatar {
-border-color: #21B94E;
-}
-
-
-.taustakuva {
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-padding: 2rem;
-background-image: url("https://i.ibb.co/tY89SCX/bg.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.Akurbox,
-.fisuBox {
-margin-top: 20px;
-padding: 10px;
-border: 2px solid #ccc;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-width: 100%;
-}
-
-.Akurbox textarea,
-.fisuBox textarea {
-width: 100%;
-min-height: 100px;
-max-height: 300px;
-border: 1px solid #ccc;
-border-radius: 5px;
-padding: 10px;
-font-size: 16px;
-color: #000;
-transition: border-color 0.3s;
-}
-
-.Akurbox textarea::placeholder,
-.fisuBox textarea::placeholder {
-color: #1DA1F2;
-font-style: italic;
-}
-
-.note {
-color: #555;
-}
-
-@media (min-width: 1024px) {
-.message {
-justify-content: space-between;
-}
-}
-
-@media (prefers-color-scheme: dark) {
-.pokemonCard {
-background-color: #1f2937;
-border-color: lightslategray;
-}
-
-.pokemonCard h3, .pokemonCard .description {
-color: white;
-}
-
-.fisuAvatar, .akurAvatar {
-background-color: #4a5568;
-}
-}
-
-.ProductGrid {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-gap: 20px;
-}
-
-.ShopCard {
-flex: 1 1 30%;
-max-width: 30%;
-border: 1px solid rgba(0, 0, 0, 0.8);
-text-align: center;
-}
-
-.ProductAvatar {
-max-width: 100%;
-height: auto;
-display: block;
-margin-bottom: 10px;
-}
-
-.AddToCartButton {
-background-color: #007bff;
-color: white;
-border: none;
-padding: 8px 16px;
-cursor: pointer;
-}
-
-.AddToCartButton:hover {
-background-color: #0056b3;
-}
-
-.ClearCartButton {
-    background-color: #dc3545; /* Bootstrap danger color */
+    background-color: black;
+    }
+    
+    .mainHeader {
+    background: rgb(75, 72, 72);
+    background: linear-gradient(122deg, rgba(75, 72, 72, 1) 0%, rgba(227, 227, 227, 1) 51%, rgba(198, 189, 189, 1) 100%);
+    }
+    
+    .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    }
+    
+    .laatikko {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    }
+    
+    .content {
+    background-color: var(--color-dark-bg, #2d3748);
+    border-radius: 0.5rem;
+    }
+    
+    .message {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    }
+    
+    .pokemonCard {
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    border: 2px solid #f6e58d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    }
+    
+    .pokemonCard:hover {
+    transform: scale(1.05);
+    }
+    
+    .pokemonCard h3 {
+    font-family: 'Pokemon', sans-serif;
+    color: #222;
+    margin: 10px 0;
+    }
+    
+    .pokemonCard .description {
+    color: #555;
+    font-size: 1rem;
+    font-style: italic;
+    }
+    
+    .fisuAvatar,
+    .akurAvatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    background-color: #ecf0f1;
+    }
+    
+    .akurAvatar {
+    border-color: #21B94E;
+    }
+    
+    
+    .taustakuva {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-image: url("https://i.ibb.co/tY89SCX/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .Akurbox,
+    .fisuBox {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    }
+    
+    .Akurbox textarea,
+    .fisuBox textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    transition: border-color 0.3s;
+    }
+    
+    .Akurbox textarea::placeholder,
+    .fisuBox textarea::placeholder {
+    color: #1DA1F2;
+    font-style: italic;
+    }
+    
+    .note {
+    color: #555;
+    }
+    
+    @media (min-width: 1024px) {
+    .message {
+    justify-content: space-between;
+    }
+    }
+    
+    @media (prefers-color-scheme: dark) {
+    .pokemonCard {
+    background-color: #1f2937;
+    border-color: lightslategray;
+    }
+    
+    .pokemonCard h3, .pokemonCard .description {
+    color: white;
+    }
+    
+    .fisuAvatar, .akurAvatar {
+    background-color: #4a5568;
+    }
+    }
+    
+    .ProductGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    }
+    
+    .ShopCard {
+    flex: 1 1 30%;
+    max-width: 30%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    }
+    
+    .ProductAvatar {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    }
+    
+    .AddToCartButton {
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     cursor: pointer;
-    margin-top: 20px; /* Spacing from the items above */
-}
-
-.ClearCartButton:hover {
-    background-color: #c82333; /* Darker red on hover */
-}
-
+    }
+    
+    .AddToCartButton:hover {
+    background-color: #0056b3;
+    }
+    
+    .ClearCartButton {
+        background-color: #dc3545; 
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px; 
+    }
+    
+    .ClearCartButton:hover {
+        background-color: #c82333;
+    }
