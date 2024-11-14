@@ -9,19 +9,19 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     /**
-     * Display a listing of the news articles.
+     * Display a listing of the news articles on the welcome page.
      */
     public function index()
     {
         // Get all news articles ordered by latest first
         $newsArticles = News::orderBy('created_at', 'desc')->get();
-
-        // Return a view with the news articles
-        return view('news.index', compact('newsArticles'));
+    
+        // Return the welcome view with the news articles
+        return view('welcome', compact('newsArticles'));
     }
 
     /**
-     * Show the form for creating a new news article.
+     * Show the form for creating a new news article (admin dashboard).
      */
     public function create()
     {
@@ -29,7 +29,7 @@ class NewsController extends Controller
     }
 
     /**
-     * Store a newly created news article in storage.
+     * Store a newly created news article in storage (admin dashboard).
      */
     public function store(Request $request)
     {
@@ -54,13 +54,4 @@ class NewsController extends Controller
 
         return redirect()->route('news.index')->with('success', 'News article created successfully!');
     }
-
-    /**
-     * Display the specified news article.
-     */
-    public function show(News $news)
-    {
-        return view('news.show', compact('news'));
-    }
 }
-
