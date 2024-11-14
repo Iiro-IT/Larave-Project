@@ -10,11 +10,14 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     
-                    form action="{{ route('ProductController', ['id'=>1]) }}">
-                    Tuotteen nimi <input type="text" name="price" id="price">
-                    @error("price")
-                        <div class="alert alert-danger">{{ $message }} </div>
-
+                    <form action="{{ route('ProductController', ['id'=>1]) }}">
+                        Tuotteen nimi <input type="text" name="price" id="price">
+                        
+                        @error("price")
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </form>
+                    
                 </div>
             </div>
         </div>
