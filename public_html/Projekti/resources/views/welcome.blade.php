@@ -65,37 +65,69 @@
                         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                                    <div class="flex justify-between items-center">
+                                    <div class="flex items-center">
                                         <!-- Text on the left -->
-                                        <div class="w-1/2 mr-4">
+                                        <div class="w-1/2">
                                             <p>
-                                                Envoys curious to learn more about the continued development of <b>SpellGauntlet</b><br>
-                                                would be wise to watch <b>SpGauntletShorts!</b> Join <b>SpellGauntlet</b> developers as they <br>
-                                                show you the world of <b>SpellGauntlet.</b>
+                                                For those curious to embark on a deeper journey into the vast and evolving world of <b>SpellGauntlet</b>, watching <b>SpGauntletShorts</b> is an essential step. Within these videos, the passionate developers of <b>SpellGauntlet</b> take you behind the scenes to explore the rich lore, the immersive realms, and the boundless magic that define this extraordinary universe. Learn about the spells and abilities only hinted at in the game, uncover the untold stories of powerful sorcerers and ancient legends, and discover the enchanted landscapes that make <b>SpellGauntlet</b> a truly spellbinding experience.
+
+                                                With each new episode, you’ll gain insights into the art of crafting powerful spells, the balance of light and dark forces, and the challenges faced by those who choose the path of the mage. From the arcane towers to mystical forests, the world of <b>SpellGauntlet</b> is a realm of endless potential and powerful magic, awaiting those daring enough to wield it. Don’t miss out—join us as we reveal the secrets and powers that lie within the world of <b>SpellGauntlet</b>, where adventure and mystery await at every turn.
                                             </p>
                                         </div>
-                                        
-                                            <!-- Iframe on the right -->
-                                            <iframe class="w-1/2 h-auto" width="560" height="315" 
+                                        <!-- Wrapper div with padding-left -->
+                                        <div style="padding-left: 10%;">
+                                            <iframe class=" h-auto" width="560" height="315" 
                                                 src="https://www.youtube.com/embed/oHg5SJYRHA0" title="RickRoll"
                                                 frameborder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                                             </iframe>
-                                            
+                                        </div>
                                     </div>
+                                    <!-- News Section -->
+                                    <h1 class="text-center text-4xl font-bold mb-8">News</h1>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        @foreach($newsArticles as $news)
+                                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                                                <!-- Display news image if available -->
+                                                @if($news->image)
+                                                    <img src="{{ asset('storage/' . $news->image) }}" alt="{{ $news->title }}" class="w-full h-48 object-cover">
+                                                @else
+                                                    <!-- Placeholder image if no image is provided -->
+                                                    <img src="https://via.placeholder.com/600x400" alt="{{ $news->title }}" class="w-full h-48 object-cover">
+                                                @endif
+
+                                                <div class="p-6">
+                                                    <!-- Display publication date -->
+                                                    <p class="text-gray-600 text-sm mb-1">Posted on: {{ $news->created_at->format('F j, Y') }}</p>
+                                                    
+                                                    <!-- Title and description -->
+                                                    <h2 class="text-xl font-bold text-gray-800 mb-2">{{ $news->title }}</h2>
+                                                    <p class="text-gray-700">{{ Str::limit($news->description, 100) }}</p>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    <!-- End of News Section -->
+                                    
+                                    <br><br><br>
+                                    <div class="text-center">
+                                        <footer class="CopyrightFooter">
+                                            <p class="font-semibold text-lg">SpellGauntlet &copy; 2024 - 2025</p>
+                                            <p>All rights reserved</p>
+                                        </footer>
+                                    </div>
+                                    <br><br><br>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
                 
+                
 
 
-                <footer class="CopyrightFooter">
-                    SpellGauntlet &copy; <br>
-                    2024 - 2025 <br>
-                </footer>
+
             </div>
         </div>
     </div>
