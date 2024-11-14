@@ -48,7 +48,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/store', [ShopController::class, 'store'])->name('store');
 Route::post('/add-to-cart', [ShopController::class, 'addToCart'])->name('addToCart');
 Route::get('/cart', [ShopController::class, 'cart'])->name('cart');
-Route::post('/clear-cart', [ShopController::class, 'clearCart'])->name('clearCart'); // New route
+Route::post('/clear-cart', [ShopController::class, 'clearCart'])->name('clearCart');
 
 
 
@@ -60,10 +60,8 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
-
 
 
 
