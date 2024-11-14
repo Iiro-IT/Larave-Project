@@ -4,11 +4,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\ShopController;
-
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductsController;
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [NewsController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -63,7 +62,10 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/news/create', [NewsController::class, 'create'])->name('news.create');  // Admin page to create news
+    Route::post('/admin/news', [NewsController::class, 'store'])->name('news.store');  // Store the news
+});
 
 
 
