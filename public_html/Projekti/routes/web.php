@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductsController;
@@ -39,6 +38,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
+    Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
+    Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 });
 
 Route::get('/store', [ShopController::class, 'store'])->name('store');
@@ -47,19 +50,15 @@ Route::get('/cart', [ShopController::class, 'cart'])->name('cart');
 Route::post('/clear-cart', [ShopController::class, 'clearCart'])->name('clearCart');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
-    Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
-    Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
+
 });
 
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/admin/news/create', [NewsController::class, 'create'])->name('news.create');  // Admin page to create news
-    Route::post('/admin/news', [NewsController::class, 'store'])->name('news.store');  // Store the news
+    Route::get('/admin/news/create', [NewsController::class, 'create'])->name('news.create'); // Admin page to create news
+    Route::post('/admin/news', [NewsController::class, 'store'])->name('news.store'); // Store the news
 });
-
-
 
 require __DIR__ . '/auth.php';

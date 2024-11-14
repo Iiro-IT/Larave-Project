@@ -1,11 +1,11 @@
 .mainNav {
-background-color: black;
-color: white;
+background-color: rgba(0, 0, 0, 0.295);
+color: rgb(1, 15, 95);
 }
 
 
 .mainNav a {
-color: white;
+color: rgb(1, 15, 95);;
 text-decoration: none;
 padding: 10px;
 font-size: 16px;
@@ -13,7 +13,7 @@ transition: color 0.3s ease;
 }
 
 .mainNav a:hover {
-color: #ddd;
+color: rgb(32, 50, 151);;
 }
 
 
@@ -23,7 +23,7 @@ display: flex !important;
 
 
 .mainNav button {
-color: white;
+color: rgb(1, 15, 95);;
 }
 
 
@@ -265,4 +265,3 @@ transition: background-color 0.3s;
 .submit-button:hover {
 background-color: #2563eb;
 }
-

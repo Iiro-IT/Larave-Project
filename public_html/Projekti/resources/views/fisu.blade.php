@@ -12,7 +12,7 @@
                     <div class="message">
                         <div class="fisuBox">
                             <textarea id="dynamicFisuTextarea" readonly placeholder="Check our Instagram:">
-                                Your initial text here...</textarea>
+                                4kur text.....</textarea>
                         </div>
                     </div>
                 </div>
