@@ -28,8 +28,9 @@
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
         <img id="background" class="absolute inset-0 w-full h-full object-cover z-[-1]"
             src="https://i.ibb.co/tY89SCX/bg.jpg" alt="Background Image" />
-        <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-            <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
+        <div
+            class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
+            <div class="relative w-full max-w-full px-6 lg:max-w-8xl"> <!-- Change max-w-2xl to max-w-full -->
                 <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
                     <!-- Logo -->
                     <div class="flex lg:justify-center lg:col-start-2 w-1/2">
@@ -64,17 +65,32 @@
                         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                                    {{ __('VIDEOGAME TRAILER!') }}
-                                    <iframe width="977" height="733"
-                                        src="https://www.youtube.com/embed/oHg5SJYRHA0" title="RickRoll" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                    </iframe>
+                                    <div class="flex justify-between items-center">
+                                        <!-- Text on the left -->
+                                        <div class="w-1/2 mr-4">
+                                            <p>
+                                                Envoys curious to learn more about the continued development of <b>SpellGauntlet</b><br>
+                                                would be wise to watch <b>SpGauntletShorts!</b> Join <b>SpellGauntlet</b> developers as they <br>
+                                                show you the world of <b>SpellGauntlet.</b>
+                                            </p>
+                                        </div>
+                                        
+                                            <!-- Iframe on the right -->
+                                            <iframe class="w-1/2 h-auto" width="560" height="315" 
+                                                src="https://www.youtube.com/embed/oHg5SJYRHA0" title="RickRoll"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                            </iframe>
+                                            
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
+                
+
 
                 <footer class="CopyrightFooter">
                     SpellGauntlet &copy; <br>
@@ -89,7 +105,7 @@
 
         function requestAudioPermission() {
             // Create an AudioContext to handle permissions
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const audioContext = new(window.AudioContext || window.webkitAudioContext)();
 
             // Resume the audio context and attempt to play the audio
             audioContext.resume().then(() => {
@@ -106,7 +122,7 @@
         }
 
         // Randomly switch tracks when one ends
-        audio.addEventListener('ended', function () {
+        audio.addEventListener('ended', function() {
             let sources = audio.getElementsByTagName('source');
             let current = Math.floor(Math.random() * sources.length);
             audio.src = sources[current].src; // Randomly select a new track
@@ -122,7 +138,9 @@
                 requestAudioPermission();
                 // Remove the event listener after first interaction
                 document.body.removeEventListener('click', arguments.callee);
-            }, { once: true }); // Only run once
+            }, {
+                once: true
+            }); // Only run once
         });
     </script>
 </body>
