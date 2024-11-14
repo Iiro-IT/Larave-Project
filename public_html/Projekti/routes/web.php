@@ -41,32 +41,23 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-
 Route::get('/store', [ShopController::class, 'store'])->name('store');
 Route::post('/add-to-cart', [ShopController::class, 'addToCart'])->name('addToCart');
 Route::get('/cart', [ShopController::class, 'cart'])->name('cart');
 Route::post('/clear-cart', [ShopController::class, 'clearCart'])->name('clearCart');
 
-
-
-
 Route::middleware(['auth'])->group(function () {
     Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
     Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
     Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
-
 });
 
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/admin/news/create', [NewsController::class, 'create'])->name('news.create');  // Admin page to create news
-    Route::post('/admin/news', [NewsController::class, 'store'])->name('news.store');  // Store the news
+    Route::get('/admin/news/create', [NewsController::class, 'create'])->name('news.create'); // Admin page to create news
+    Route::post('/admin/news', [NewsController::class, 'store'])->name('news.store'); // Store the news
 });
-
-
 
 require __DIR__ . '/auth.php';
