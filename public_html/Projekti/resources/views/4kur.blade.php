@@ -12,7 +12,7 @@
                     <div class="message">
                         <div class="Akurbox">
                             <textarea id="dynamicAkurTextarea" readonly placeholder="Check our Instagram: ">
-                                Your initial text here...</textarea>
+                                4kur text.....</textarea>
                                
                         </div>
                     </div>
