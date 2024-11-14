@@ -2,11 +2,25 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <!-- Name -->
+        <!-- Display Name -->
         <div>
             <x-input-label for="name" :value="__('Display Name')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        </div>
+
+        <!-- First Name -->
+        <div class="mt-4">
+            <x-input-label for="firstname" :value="__('First Name')" />
+            <x-text-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" />
+            <x-input-error :messages="$errors->get('firstname')" class="mt-2" />
+        </div>
+
+        <!-- Last Name -->
+        <div class="mt-4">
+            <x-input-label for="lastname" :value="__('Last Name')" />
+            <x-text-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" />
+            <x-input-error :messages="$errors->get('lastname')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
@@ -16,26 +30,41 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <!-- Contact -->
+        <div class="mt-4">
+            <x-input-label for="contact" :value="__('Contact')" />
+            <x-text-input id="contact" class="block mt-1 w-full" type="text" name="contact" :value="old('contact')" />
+            <x-input-error :messages="$errors->get('contact')" class="mt-2" />
+        </div>
+
+        <!-- Birthday -->
+        <div class="mt-4">
+            <x-input-label for="birthday" :value="__('Birthday')" />
+            <x-text-input id="birthday" class="block mt-1 w-full" type="date" name="birthday" :value="old('birthday')" />
+            <x-input-error :messages="$errors->get('birthday')" class="mt-2" />
+        </div>
+
+        <!-- Status -->
+        <div class="mt-4">
+            <x-input-label for="status" :value="__('Status')" />
+            <select id="status" class="block mt-1 w-full" name="status">
+                <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>Active</option>
+                <option value="0" {{ old('status') == '0' ? 'selected' : '' }}>Inactive</option>
+            </select>
+            <x-input-error :messages="$errors->get('status')" class="mt-2" />
+        </div>
+
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
+            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- Confirm Password -->
         <div class="mt-4">
             <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
+            <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
