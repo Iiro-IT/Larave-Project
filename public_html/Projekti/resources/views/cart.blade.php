@@ -21,7 +21,6 @@
                         </div>
                     @endforeach
 
-                    
                     <form action="{{ route('clearCart') }}" method="POST">
                         @csrf
                         <button type="submit" class="ClearCartButton">Clear Cart</button>
