@@ -109,6 +109,7 @@ display: flex;
 margin-right: 20px;
 margin-top: 20px;
 margin-bottom: 20px;
+margin-left: 160px;
 animation: imgFloat 7s ease-in-out infinite;
 }
 
@@ -136,8 +137,7 @@ margin-right: auto;
 background-color: var(--BoxBackground);
 border-radius: 0.5rem;
 max-width: 100%;
-justify-content: space-between;
-display: flex;
+
 }
 
 .Avatarmessage {
@@ -146,6 +146,71 @@ flex-wrap: wrap;
 padding: 1.5rem;
 width: 90%
 ;
+}
+
+.Osa1 {
+    justify-content: space-between;
+    display: flex;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--background); /* Dark background color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.top-footer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.middle-footer {
+    margin: 20px 0;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-menu a {
+    color: #000000d2;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #00aaff; /* Highlight color on hover */
+}
+
+.CopyRight_footer {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaaaaa; /* Subtle gray for copyright text */
+}
+
+.social_icons_footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social_icons_footer .icon {
+    font-size: 1.5rem;
+    color: #000000b7;
+    transition: color 0.3s ease;
+}
+
+.social_icons_footer .icon:hover {
+    color: #00aaff; /* Highlight color on hover */
 }
 
 .taustakuva {
