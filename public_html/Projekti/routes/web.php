@@ -57,14 +57,7 @@ Route::get('/products/create', [ProductsController::class, 'create'])->name('pro
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 
 Route::middleware(['auth'])->group(function () {
-
+    Route::get('/admin/news/create', [NewsController::class, 'create'])->name('news.create'); // Admin page to create news
+    Route::post('/admin/news', [NewsController::class, 'store'])->name('news.store'); // Store the news
 });
-
-
-
-Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
-Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
-Route::put('/products/{id}', [ProductsController::class, 'update'])->name('products.update');
-Route::delete('/products/{id}', [ProductsController::class, 'destroy'])->name('products.destroy');
-
 require __DIR__ . '/auth.php';
