@@ -1,7 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Fisu Page') }}
         </h2>
     </x-slot>
 
@@ -12,7 +11,7 @@
                     <div class="message">
                         <div class="fisuBox">
                             <textarea id="dynamicFisuTextarea" readonly placeholder="Check our Instagram:">
-                                4kur text.....</textarea>
+                                Fisu Text.......</textarea>
                         </div>
                     </div>
                 </div>
