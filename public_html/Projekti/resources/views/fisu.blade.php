@@ -5,15 +5,16 @@
     </x-slot>
 
     <div class="py-12 taustakuva">
-        <div class="container">
-            <div class="laatikko">
-                <div class="content">
-                    <div class="message">
+        <div class="Avatarcontainer">
+            <div class="Avatarlaatikko">
+                <div class="Avatarcontent">
+                    <div class="Avatarmessage">
                         <div class="fisuBox">
                             <textarea id="dynamicFisuTextarea" readonly placeholder="Check our Instagram:">
                                 Fisu Text.......</textarea>
                         </div>
                     </div>
+                    <img class="Avatar" src="fisu_avatar.png">
                 </div>
             </div>
         </div>
@@ -22,7 +23,7 @@
     <script>
         const fisuTextarea = document.getElementById('dynamicFisuTextarea');
 
-        fisuTextarea.addEventListener('input', function () {
+        fisuTextarea.addEventListener('input', function() {
             this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px';
         });

@@ -1,29 +1,33 @@
+:root {
+
+--background: #fff;
+--BoxBackground: #fff;
+}
+
 .mainNav {
-background-color: rgba(0, 0, 0, 0.8);
-color: rgb(1, 15, 95);
+background-color: var(--background);
+color: rgba(0, 0, 0, 0.836);
+height: auto;
+margin: 12px;
+font-size: 16px;
+border-radius: 15px;
 }
 
 
 .mainNav a {
-color: rgb(255, 255, 255, 0.2);
 text-decoration: none;
 padding: 10px;
 font-size: 16px;
 transition: color 0.3s ease;
+
 }
 
 .mainNav a:hover {
-color: rgb(32, 50, 151);
+color: rgba(32, 189, 71, 0.6);
+font-size: 18px;
+text-shadow: rgba(0, 0, 0, 0.514) -1px 1px 1px;
+transition: font-size 0.5s, text-shadow 0.5s ease;
 }
-
-
-.mainNav button {
-color: rgb(1, 15, 95);
-}
-
-
-
-
 
 .container {
 padding-top: 3rem;
@@ -92,6 +96,50 @@ background-color: #ecf0f1;
 border-color: #21B94E;
 }
 
+.Avatar {
+width: 10%;
+display: flex;
+margin-right: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+animation: imgFloat 7s ease-in-out infinite;
+}
+
+@keyframes imgFloat {
+
+50%{
+transform: translateY(10px);
+border-radius: 45% 55% 45% 55%;
+}
+
+}
+
+.Avatarcontainer {
+padding-top: 3rem;
+padding-bottom: 3rem;
+}
+
+.Avatarlaatikko {
+max-width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.Avatarcontent {
+background-color: var(--BoxBackground);
+border-radius: 0.5rem;
+max-width: 100%;
+justify-content: space-between;
+display: flex;
+}
+
+.Avatarmessage {
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 1.5rem;
+width: 90%
+;
+}
 
 .taustakuva {
 min-height: 100vh;
@@ -134,7 +182,7 @@ font-style: italic;
 
 .note {
 color: #555;
-} 
+}
 
 @media (min-width: 1024px) {
 .message {
