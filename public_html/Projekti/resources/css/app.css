@@ -5,8 +5,9 @@
 }
 
 .mainNav {
-background-color: var(--background);
-color: rgba(0, 0, 0, 0.836);
+background: rgb(0,0,0);
+background: linear-gradient(142deg, rgba(0,0,0,1) 24%, rgba(226,226,226,1) 100%);
+color: rgba(255, 255, 255, 0.836);
 height: auto;
 margin: 12px;
 font-size: 16px;
@@ -15,10 +16,11 @@ border-radius: 15px;
 
 
 .mainNav a {
+
 text-decoration: none;
 padding: 10px;
 font-size: 16px;
-transition: color 0.3s ease;
+transition: color 0.3s ease var(--background);
 
 }
 
@@ -30,10 +32,10 @@ transition: font-size 0.5s, text-shadow 0.5s ease;
 }
 
 .Profile {
-    display: flex;
-   align-content: right;
-   margin-left: auto;
-   margin-right: 20px;
+display: flex;
+align-content: right;
+margin-left: auto;
+margin-right: 20px;
 }
 
 .container {
@@ -109,7 +111,7 @@ display: flex;
 margin-right: 20px;
 margin-top: 20px;
 margin-bottom: 20px;
-margin-left: 160px;
+margin-left: 50px;
 animation: imgFloat 7s ease-in-out infinite;
 }
 
@@ -125,6 +127,7 @@ border-radius: 45% 55% 45% 55%;
 .Avatarcontainer {
 padding-top: 3rem;
 padding-bottom: 3rem;
+
 }
 
 .Avatarlaatikko {
@@ -143,74 +146,74 @@ max-width: 100%;
 .Avatarmessage {
 justify-content: space-around;
 flex-wrap: wrap;
+display: flex;
 padding: 1.5rem;
-width: 90%
-;
+width: 70%;
 }
 
 .Osa1 {
-    justify-content: space-between;
-    display: flex;
+justify-content: space-between;
+display: flex;
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--background); /* Dark background color */
-    padding: 20px 0;
-    text-align: center;
+background-color: var(--background); /* Dark background color */
+padding: 20px 0;
+text-align: center;
 }
 
 .top-footer {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 10px;
 }
 
 .middle-footer {
-    margin: 20px 0;
+margin: 20px 0;
 }
 
 .footer-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+gap: 15px;
 }
 
 .footer-menu a {
-    color: #000000d2;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+color: #000000d2;
+text-decoration: none;
+font-size: 1rem;
+transition: color 0.3s ease;
 }
 
 .footer-menu a:hover {
-    color: #00aaff; /* Highlight color on hover */
+color: #00aaff; /* Highlight color on hover */
 }
 
 .CopyRight_footer {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #aaaaaa; /* Subtle gray for copyright text */
+margin-top: 10px;
+font-size: 0.9rem;
+color: #aaaaaa; /* Subtle gray for copyright text */
 }
 
 .social_icons_footer {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+margin-top: 15px;
+display: flex;
+justify-content: center;
+gap: 10px;
 }
 
 .social_icons_footer .icon {
-    font-size: 1.5rem;
-    color: #000000b7;
-    transition: color 0.3s ease;
+font-size: 1.5rem;
+color: #000000b7;
+transition: color 0.3s ease;
 }
 
 .social_icons_footer .icon:hover {
-    color: #00aaff; /* Highlight color on hover */
+color: #00aaff; /* Highlight color on hover */
 }
 
 .taustakuva {
